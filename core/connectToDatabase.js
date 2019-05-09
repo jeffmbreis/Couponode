@@ -1,14 +1,13 @@
 require('dotenv').config()
 const Sequelize = require('sequelize')
 
-async function connectToDatabase() {
-    const connectionData = {}
+async function connectToDatabase(connectionData) {
 
     getEnvironmentDatabaseConnectionData(connectionData)
     await connectToDatabase(connectionData)
 
-    async function getEnvironmentDatabaseConnectionData(connectionData) {
-        const env = await process.env.NODE_ENV || 'development'
+    function getEnvironmentDatabaseConnectionData(connectionData) {
+        const env = process.env.NODE_ENV || 'development'
 
         connectionData.host = process.env[`DATABASE_HOST_${env.toUpperCase()}`]
         connectionData.name = process.env[`DATABASE_NAME_${env.toUpperCase()}`]

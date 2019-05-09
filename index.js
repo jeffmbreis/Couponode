@@ -1,7 +1,9 @@
 const connectToDatabase = require('./core/connectToDatabase')
 
 const start = async () => {
-    await connectToDatabase()
+    const connectionData = {}
+
+    await connectToDatabase(connectionData)
     console.log('continua')
 }
 
