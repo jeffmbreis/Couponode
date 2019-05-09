@@ -1,3 +1,6 @@
+#IDEs
+.idea/workspace.xml
+
 # Logs
 logs
 *.log
