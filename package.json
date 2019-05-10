@@ -19,6 +19,7 @@
   "dependencies": {
     "dotenv": "^8.0.0",
     "mysql2": "^1.6.5",
-    "sequelize": "^5.8.5"
+    "sequelize": "^5.8.5",
+    "sequelize-connect": "^2.1.2"
   }
 }
